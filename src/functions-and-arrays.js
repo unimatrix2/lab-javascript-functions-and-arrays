@@ -42,18 +42,13 @@ const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 function sum(arr) {
   let result = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === 'object') {
-      return undefined;
-    } else if (typeof arr[i] === 'string') {
-      result += arr[i].length
-    } else if (typeof arr[i] === 'boolean' && arr[i] === true) {
-      result += 1;
-    } else if (typeof arr[i] === 'number') {
-      result += arr[i];
-    }
-    }
-    return result;
+    if (typeof arr[i] === 'object') {throw new Error("Unsupported data type sir or ma'am")}
+      else if (typeof arr[i] === 'string') {result += arr[i].length}
+      else if (typeof arr[i] === 'boolean' && arr[i] === true) {result += 1}
+      else if (typeof arr[i] === 'number') {result += arr[i]}
   }
+    return result;
+}
 const arr1 = ['ar12']
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
