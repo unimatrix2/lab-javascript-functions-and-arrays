@@ -48,6 +48,7 @@ function sum(arr) {
     return result;
 }
 const arr1 = ['ar12'];
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
@@ -66,14 +67,21 @@ function averageNumbers(arr) {
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 function averageWordLength(arr) {
   let wordAverageResult = 0;
-  if (arr.length === 0) {
-    return null;
-  } else {
+  if (arr.length === 0) {return null;}
+  else {
     wordAverageResult = sum(arr) / arr.length;
     return wordAverageResult;
   }
 }
 
+//Bonus 4.1
+const mixedArr2 = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+function avg(arr) {
+  if (arr.length === 0) {return null;}
+  let result = (sum(arr) / arr.length);
+  result = parseFloat(result.toFixed(2));
+  return result;
+}
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
@@ -101,15 +109,19 @@ function uniquifyArray(arr) {
 }
 
 // Iteration #6: Find elements
-const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
-function doesWordExist(word, arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (indexOf(word) !== -1) {return true;}
-    else return false;
-  }
-}
-  
+const wordsFind = [];
 
+function doesWordExist(arr, word) {
+  let count = 0;
+  if (arr === []) {return null;}
+  for (let value of arr) {
+    if (value === word) {count++;}
+  }
+  if (count === 0 && arr !== []) {return false;}
+  else return true;
+}
+
+console.log(doesWordExist(wordsFind, 'Bezos'));
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -125,6 +137,14 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes(arr, word) {
+  let counter = 0;
+  for (let value of arr) {
+    if (value === word) {counter++;}
+  }
+  return counter;
+}
 
 // Iteration #8: Bonus
 
@@ -150,3 +170,14 @@ const matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+
+function greatestProduct(arr, num) {
+  let result = 0;
+  let select_index = 0;
+  for (let value of arr) {
+    for (let val of value) {
+      select_index = indexOf(num);
+    }
+    
+  }
+}
