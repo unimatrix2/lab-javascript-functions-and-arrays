@@ -31,9 +31,7 @@ function findLongestWord(arr) {
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 function sumNumbers(arr) {
   let result = 0;
-  for (value of arr) {
-    result += value;
-  }
+  for (let value of arr) {result += value;}
   return result;
 }
 
@@ -42,14 +40,14 @@ const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 function sum(arr) {
   let result = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === 'object') {throw new Error("Unsupported data type sir or ma'am")}
-      else if (typeof arr[i] === 'string') {result += arr[i].length}
-      else if (typeof arr[i] === 'boolean' && arr[i] === true) {result += 1}
-      else if (typeof arr[i] === 'number') {result += arr[i]}
+    if (typeof arr[i] === 'object') {throw new Error("Unsupported data type sir or ma'am");}
+      else if (typeof arr[i] === 'string') {result += arr[i].length;}
+      else if (typeof arr[i] === 'boolean' && arr[i] === true) {result += 1;}
+      else if (typeof arr[i] === 'number') {result += arr[i];}
   }
     return result;
 }
-const arr1 = ['ar12']
+const arr1 = ['ar12'];
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
@@ -93,7 +91,7 @@ const wordsUnique = [
 
 function uniquifyArray(arr) {
   let uniqueArray = [];
-  if (arr.length === 0) {return null}
+  if (arr.length === 0) {return null;}
   for (let j = 0; j < arr.length; j++) {
       if (uniqueArray.indexOf(arr[j]) === -1) {
           uniqueArray.push(arr[j]);
@@ -106,7 +104,7 @@ function uniquifyArray(arr) {
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 function doesWordExist(word, arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (indexOf(word) !== -1) {return true}
+    if (indexOf(word) !== -1) {return true;}
     else return false;
   }
 }
